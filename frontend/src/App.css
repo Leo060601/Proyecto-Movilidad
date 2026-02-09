@@ -1,0 +1,60 @@
+/* =========================
+	 SECCIÓN: Configuración general de la página
+	 ========================= */
+	 html, body {
+		margin: 0;
+		padding: 0;
+		min-height: 100vh; /* Asegura que la página ocupe todo el alto */
+		display: flex;
+		flex-direction: column;
+		font-family: Arial, sans-serif;
+		background: var(--background);
+	}
+  
+	.App {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+  
+	/* App.css */
+
+/* =========================
+	 SECCIÓN: Estilos para el header
+	 ========================= */
+
+/* Asegura que el header sea de tamaño dinámico, dependiendo del contenido */
+.app-header {
+	background-color: #333;
+	color: #fff;
+	padding: 15px 20px;  /* Relleno para que el header no se vea apretado */
+	display: flex;
+	justify-content: flex-end; /* Alinea los elementos hacia la derecha */
+	align-items: center; /* Centra el contenido verticalmente */
+	width: 100%; /* Asegura que ocupe el ancho completo de la pantalla */
+	box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+	position: fixed; /* Lo hace fijo en la parte superior */
+	top: 0; /* Lo coloca en la parte superior */
+	left: 0; /* Lo coloca a la izquierda */
+	z-index: 1000; /* Lo pone por encima de otros elementos */
+}
+
+/* Estilo del título h1 en el header */
+.app-header h1 {
+	margin: 0;  /* Elimina el margen por defecto */
+	font-size: 1.8rem; /* Tamaño de la fuente */
+	font-weight: bold; /* Negritas para resaltar */
+	text-align: right; /* Alinea el texto hacia la derecha */
+	letter-spacing: 1px; /* Espaciado entre letras */
+	word-wrap: break-word; /* Permite el salto de línea si el texto es muy largo */
+	max-width: 100%;  /* Asegura que el texto no se desborde */
+}
+
+/* =========================
+	 SECCIÓN: Fondo degradado y sombra
+	 ========================= */
+
+.app-header {
+	background: linear-gradient(45deg, #4e73df, #224abe); /* Fondo con gradiente */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+}
