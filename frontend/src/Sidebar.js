@@ -6,11 +6,12 @@ function Sidebar(props) {
 	const [filteredRoutes, setFilteredRoutes] = useState([]);
 
 	useEffect(() => {
+
 		const fetchRoutes = async () => {
 			try {
-				const response = await axios.get('http://localhost:5000/routes'); // Cambia la URL a la de tu API
+				const response = await axios.get('http://localhost:5000/routes'); // Actualiza la URL al nuevo endpoint
 				const celayaRoutes = response.data.filter(route => route.city === 'Celaya');
-				setFilteredRoutes(celayaRoutes); 
+				setFilteredRoutes(celayaRoutes);
 			} catch (error) {
 				console.error('Error fetching routes:', error);
 			}
@@ -32,7 +33,7 @@ function Sidebar(props) {
 				<div className="route-list">
 					{filteredRoutes.length > 0 ? (
 						filteredRoutes.map(route => (
-							<button key={route._id} onClick={() => props.onRouteSelect(route._id)}>
+							<button key={route._id} onClick={() => props.onRouteSelect(route)}>
 								{route.name}
 							</button>
 						))
